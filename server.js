@@ -15,6 +15,7 @@ app.listen(PORT, () =>
 
 // set up routes
 app.use("/posts", require("./routes/postRoutes"));
+app.use("/users", require("./routes/userRoutes"));
 
 // setup mongoose
 mongoose.connect(

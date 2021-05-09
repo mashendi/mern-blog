@@ -6,7 +6,9 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Post.findById(req.params.id).then((response) => res.json(response));
+  Post.findById(req.params.id.toString()).then((response) =>
+    res.json(response)
+  );
 });
 
 router.post("/", (req, res) => {
